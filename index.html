@@ -1,0 +1,547 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>TaskHub-SaaS - Documentation by Infinitie Technologies</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="http://localhost/taskhub/assets/icons/logo-half.png">
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+    <section id="header">
+        <header>
+            <span class="image avatar"><img src="images/logo-half.png" alt="" /></span>
+            <h4 id="logo"><a href="#">TaskHub-SaaS</a></h4>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" class="active">Installation</a></li>
+                <li><a href="#updater" target="_blank">Auto Update</a></li>
+                <li><a href="#firebase_setup" target="_blank">Firebase Setup</a></li>
+                <li><a href="#tab" target="_blank">Table of Contents</a></li>
+                <li><a href="https://www.infinitietech.com/" target="_blank">Support</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/infinitietechnologies/" target="_blank"
+                        class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="mailto:info@infinitietech.com" target="_blank" class="icon fa-envelope"><span
+                            class="label">Email</span></a></li>
+                <li><a href="skype:jaydeepjgiri?chat" target="_blank" class="icon fa-skype"><span
+                            class="label">Skype</span></a></li>
+            </ul>
+        </footer>
+    </section>
+    <div id="wrapper">
+        <div id="main">
+            <div class="container">
+                <header class="major">
+                    <h2>TaskHub-SaaS Installation - Codeigniter</h2>
+                </header>
+                <div class="borderTop">
+
+                    <div class="span-12 last">
+                        <p class="prepend-top append-0">Thank you for purchasing the app. If you have any
+                            questions
+                            that are beyond the scope of this help file, please feel free to message me via my
+                            user
+                            page contact form <a href="mailto:info@infinitietech.com" style='color:#06F'>here</a>.
+                            Thank you so much!</p>
+                    </div>
+
+                    <p>
+                        There are two ways to install TaskHub on server. First via Installation Wizard and
+                        Second is
+                        manually using any editor. Best way is using Wizard. Let's get started.
+                    </p>
+
+                </div>
+            </div>
+            <section id="one">
+                <div class="container">
+
+                    <h3 id="installation"> 1. How to setup TaskHub-SaaS on your server automatically - (Via Wizard
+                        Installer)
+                    </h3>
+
+                    <ol>
+
+                        <li>First of all find the <b>code - vX.X</b> ( vX.X - stands for version ) folder from the
+                            downloaded package and take out all the data from <b>code - vX.X</b> folder and upload
+                            to
+                            your server.</li>
+
+                        <li>Then go to your domain for example <code>https://www.YOURDOMAIN.com/install/</code> make
+                            sure you have <code>install/</code> after your domain URL. Now you will able see page
+                            like
+                            below</li>
+
+                        <img src="images/install.png" height="10" />
+
+                        <li>Fill all the details carefully. All field is required.</li>
+                        <b>Note : </b>If you are on Localhost then <b>' Database Password '</b> is not required.
+                        </li>
+
+                        <li><b>' Super admin Email '</b> and <b>' Super admin Password '</b> will be your login
+                            credentials. This credentials will need on everytime you login. Make sure you write down
+                            somewhere this credentials.</li>
+
+                        <!-- <li><b>' App URL '</b> this URL will be your main domain url for example
+                            <code>https://www.YOURDOMAIN.com/</code>
+                        </li>
+                        <b>Note : </b>Especially don't forget to add <b>' forward slash '</b> at the end of the domain
+                        URL like this <code>'/'</code></li> -->
+
+                        <li>Now click on install and wait untill process finished. It will automatically redirect
+                            you on
+                            your login page.</li>
+
+
+                    </ol>
+
+                    <h3 style="text-align: center;">{OR}</h3>
+                    <h3 id="installation-2">How to setup TaskHub-SaaS on your server manually - (Via Coding)</h3>
+
+
+                    <ol>
+
+                        <li>First of all find the <b>Code</b> folder from the downloaded package and take out all
+                            the
+                            data from <b>Code</b> folder and upload to your server.</li>
+
+                        <li>Create a new database from cPanel</li>
+                        <li>Create new user for the database & give all the privileges to the user</li>
+                        <li>Import the database file (given in the zip file) 'taskhub-SaaS.sql' to your PHPMYADMIN </li>
+                        <li>Open File Manager or FTP or File Explorer</li>
+
+                        <!-- <li>Go To <code>'application/config/'</code> directory and Open <code>'config.php'</code> file
+                            in PHP Code
+
+                        <li>Find at line number 27 and set <b>'$config['base_url']'</b> according to below given
+                            example. <br>
+                            <code>$config['base_url'] = 'http://YOURDOMAIN.com';</code>
+                        </li> -->
+                        <!-- <b>Note : </b>Especially don't forget to add <b>' forward slash '</b> at the end of the domain
+                        URL like this <code>'/'</code></li> -->
+
+
+                        <li>Go To <code>'application/config/'</code> directory and Open <code>'database.php'</code>
+                            file
+                            in PHP Code
+
+                        <li>Set database credentials with your credentials on line number - 78,79,80,81<br><br>
+                            <blockquote>
+                                'hostname' => 'your_hostname',<br>
+                                'username' => 'your_username',<br>
+                                'password' => 'your_password',<br>
+                                'database' => 'your_database',
+                            </blockquote>
+                        </li>
+                    </ol>
+
+                    <p>Thats it! Now you are ready to run your TaskHub-SaaS App
+                        <br>Go To: <b>https://YOURDOMAIN.com/</b>
+                    </p>
+
+                    <p><b>NOTE:</b> If you are using subdirectory in instead of domain for hosting a TaskHub-SaaS
+                        application
+                        then make sure you move <b>firebase-messaging-sw.js</b> file to the root of your domain. One
+                        more thing when you need to change FCM settings then you have to do it manually by yourself.
+                    </p>
+
+                    <b>Default Login Details</b><br>
+                    User: super@gmail.com<br>
+                    Pass: super@0124 <br><br>
+                    <p><b>NOTE:</b> Above process will create <b>super admin</b> account.</p>
+                    <p><b>Wait... Wait... setup is not done yet. To enjoy full functionality of app make sure you go
+                            to
+                            settings section and add all the app details first.</b></p>
+                </div>
+            </section>
+            <section id="updater">
+                <div class="container">
+                    <h3 id="auto-updater"> Auto updater</h3>
+                    <p> How to use auto updater to update system from current version to next version. </p>
+                    <p><b> NOTE : </b> Make sure you update system in sequence. Like if you have current version 1.0
+                        and
+                        you want to update this version to 1.5 then you can't update it directly. You must have to
+                        update in sequence like first update version 1.2 then 1.3 and 1.4 so on. </p>
+                    <ul>
+                        <li>
+                            Only two simple step will update your system.
+                        </li>
+                    </ul>
+                    <ol>
+
+                        <li>Find and download <b>update.zip</b> folder from the
+                            downloaded package when ever new update arrives.</li>
+                        <li>Upload <b>update.zip</b> folder at place shown in below image and click <b>Update
+                                Now</b>.
+                            that's all your system is now updated.</li>
+                    </ol>
+                    <img src="images/updater.png" />
+                </div>
+            </section>
+            <section id="firebase_setup">
+                <div class="container">
+                    <h3 id="firebase_setup">Firebase Setup</h3>
+                    <h5>STEP 1 - Create Firebase Project</h5>
+                    <ol>
+                        <li>Goto <a href="https://console.firebase.google.com/" target="_blank"
+                                rel="noopener noreferrer">Firebase console.</a></li>
+                        <li>
+                            Register new account or try to log in with existing accout
+                            <img src="images/firebase1.png" alt="Console Page" />
+                        </li>
+                        <li>
+                            Once logged in, you can see firebase console dashboard. Click on Add Project.
+                            Provide a project name, and then select country and then after that click on
+                            Create
+                            Project. For example, see the below image.
+                            <img src="images/firebase.png" alt="Add Project" />
+                            <img src="images/firebase2.png" alt="Create Project" />
+                        </li>
+                        <li>
+                            Once the project has been created, it will automatically redirect to Firebase
+                            dashboard screen
+                            <img src="images/firebase4.png" alt="Dashboard" />
+                        </li>
+                        <li>
+                            As Taskhub-SaaS is a web project, you need to add web project/application to the
+                            firebase
+                            project.
+                            <img src="images/firebase10.png" alt="Firebase" />
+                        </li>
+                        <li>
+                            As mentioned in an earlier image, you can add Firebase to your web app.
+                            <img src="images/firebase11.png" alt="Add Web App" />
+                        </li>
+
+                        <li>
+                            Then in firebase console you will be redirected to the web app dashboard screen.
+                            <img src="images/firebase6.png" alt="Web App Dashboard" />
+                        </li>
+
+                        <li>
+                            click on the Project settings there will be an option for Cloud messaging set
+                            FCM
+                            server key.
+                            <img src="images/firebase3.png" alt="Firebase" />
+                            <hr>
+                            <img src="images/firebase7.png" alt="Firebase" />
+                        </li>
+                        <li>
+                            click on the Project settings there will be an option for Cloud messaging set
+                            Vapid key.
+                            <img src="images/firebase8.png" alt="Firebase" />
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section id="tab">
+                <div class="container">
+                    <h2><a style="color:#06F">Table of Contents</a></h2>
+                    <ul>
+                        <li>
+                            <p>Super admin</p>
+                        </li>
+                    </ul>
+                    <ol class="alpha">
+                        <li><a href="#installation">Configure on your server</a></li>
+                        <li><a href="#settings">Settings (General,Email,System)</a></li>
+                        <li><a href="#profile">Profile</a></li>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#subscriptions">Subscriptions</a></li>
+                        <li><a href="#transactions">Transactions</a></li>
+                        <li><a href="#users">Users</a></li>
+                        <li><a href="#front-settings">Front panel settings</a></li>
+                        <li><a href="#languages">Manage Languages</a></li>
+                    </ol>
+                    <ul>
+                        <li>
+                            <p>Admin</p>
+                        </li>
+                    </ul>
+                    <ol>
+                        <li><a href="#login">Login</a></li>
+                        <li><a href="#signup">Signup</a></li>
+                        <li><a href="#workspace">Manage Workspaces</a></li>
+                        <li><a href="#projects">Manage Projects</a></li>
+                        <li><a href="#calendar">Calendar</a></li>
+                        <li><a href="#chat">Chat</a></li>
+                        <li><a href="#send-mail">Send mail</a></li>
+                        <li><a href="#announcements">Announcements</a></li>
+                        <li><a href="#notifications">Notifications</a></li>
+                        <li><a href="#billing">Billing</a></li>
+                        <li><a href="#finance">Finance</a></li>
+                        <li><a href="#users">Users</a></li>
+                        <li><a href="#activity-logs">Activity logs</a></li>
+                        <li><a href="#leave-requests">Manage leave requests</a></li>
+                        <li><a href="#notes">Manage notes</a></li>
+                        <li><a href="#time_tracker">Time Tracker</a></li>
+                        <li><a href="#leads">Leads</a></li>
+                        <li><a href="#email-templates">Email Templates</a></li>
+                        <li><a href="#finance">Finance</a></li>
+                        <li><a href="#knowledgebase">Knowledgebase</a></li>
+                    </ol>
+                    <h3 id="settings"> 2. Settings</h3>
+                    <p>First Of all, we need to set general setting of app</p>
+                    <img src="images/general-settings.png" />
+                    <p>Make sure to add <b>Company Title</b> and <b>App URL</b></p>
+                    <hr>
+                    <img src="images/general-settings-1.png" />
+                    <p>Here you can see <b>Default package</b> and <b>Default tenure </b> if these are set default
+                        package and tenure will assigned automatically when new company registers.</p>
+                    <hr>
+                    <p>Added Dynamic header color options settings</p>
+                    <hr>
+                    <img src="images/change_color.PNG" />
+                    <p>Now go to email setting. Without email setting email functionality will not work.</b></p>
+                    <img src="images/email-settings.png" />
+                    <hr>
+                    <p>Now go to system setting. Without system setting chat functionality will not work.</b> <a
+                            target="_blank"
+                            href="https://developer.clevertap.com/docs/find-your-fcm-sender-id-fcm-server-api-key">
+                            Get
+                            Your FCM Details Here - Documentation</a> and <a target="_blank"
+                            href="https://console.firebase.google.com/">FCM server key</a></p>
+                    <img src="images/system-settings.png" />
+
+                    <p><b>Done. Now you can use TaskHub-SaaS without any problem.</b></p>
+
+                    <h3 id="profile"> 3. Profile</h3>
+                    <p>Click at top right corner on your name. Then select profile from the dropdown and update own
+                        profile.</p>
+                    <img src="images/super-profile.png" />
+                    <div class="section_bdr"></div>
+                    <h3 id="dashboard"> 4. Dashboard</h3>
+                    <p>Dashboard summarizes earnings, subscriptions and packages.</p>
+                    <img src="images/super-dashboard.png" />
+                    <hr>
+                    <img src="images/super-dashboard-1.png" />
+                    <div class="section_bdr"></div>
+                    <h3 id="packages"> 5. Packages</h3>
+                    <p>Super admin can create and manage packages from here</p>
+                    <img src="images/packages.png" />
+                    <div class="section_bdr"></div>
+                    <h3 id="subscriptions"> 6. Subscriptions</h3>
+                    <p>Super admin can view all the subscriptions from here</p>
+                    <img src="images/subscriptions.png" />
+                    <div class="section_bdr"></div>
+                    <h3 id="transactions"> 7. Transactions</h3>
+                    <p>It will show all the transactions to super admin </p>
+                    <img src="images/transactions.png" />
+                    <div class="section_bdr"></div>
+                    <h3 id="users"> 8. Users</h3>
+                    <p>Users list with subscription details </p>
+                    <img src="images/users-super.png" />
+                    <hr>
+                    <p>User's active subscription details </p>
+                    <img src="images/user-details-super.png" />
+                    <div class="section_bdr"></div>
+                    <h3 id="front-settings"> 9. Front panel settings</h3>
+                    <p>Super admin can manage front panel settings like privacy policy, terms and conditions, Faqs,
+                        Contact us, Payment methods </p>
+                    <p>Privacy policy </p>
+                    <img src="images/privacy-policy.png" />
+                    <hr>
+                    <p>Terms and conditions </p>
+                    <img src="images/terms-conditions.png" />
+                    <hr>
+                    <p>Faqs </p>
+                    <img src="images/faqs.png" />
+                    <hr>
+                    <p>Contact us </p>
+                    <img src="images/contact-us.png" />
+                    <hr>
+                    <p>Payment methods </p>
+                    <img src="images/payment-methods.png" />
+
+                    <h3 id="languages"> 10. Manage Languages</h3>
+                    <p> Create and Manage Languages. </p>
+                    <img src="images/languages.png" />
+                    <div class="section_bdr"></div>
+
+                    <h3>Admin</h3>
+                    <div class="section_bdr"></div>
+
+                    <h3 id="login"> 1. Login</h3>
+                    <p> After successful signup admin can login to account from here.
+                    </p>
+                    <img src="images/signup.png" />
+                    <h3 id="signup"> 2. Signup</h3>
+                    <p> Admin can create new account(signup) from here.
+                    </p>
+                    <img src="images/signup.png" />
+
+                    <div class="section_bdr"></div>
+
+                    <h3 id="workspace"> 3. Manage Workspaces</h3>
+                    <p> You can create and manage workspace from header bar and remove your self from any workspace.
+                        All
+                        the
+                        workspace will be listed in header bar and you can switch between them by click on them.
+                    </p>
+                    <img src="images/workspace.png" />
+                    <div class="section_bdr"></div>
+
+                    <h3 id="projects"> 4. Manage Projects</h3>
+                    <p>All the project will be listed here. You can create, update and delete project from here.
+                        there
+                        are 3 types of views are available for projects 1. Grid 2. List and 3. Calendar view.</p>
+                    <img src="images/projects.png" />
+
+                    <p>Details page of project all the details about that specific project will be shown here. On
+                        this
+                        page you can create milestones, tasks for project and also upload files related to the
+                        projects.
+                    </p>
+                    <img src="images/project-details.png" />
+
+                    <p>This is the page where you can create, update, delete tasks of the project and assing them to
+                        any
+                        user. You and user can drag and drop task in the process queue.</p>
+                    <img src="images/tasks.png" />
+
+                    <div class="section_bdr"></div>
+
+
+                    <h3 id="calendar"> 5. Calendar</h3>
+                    <p> Here you can Add, View, Edit & Delete events. there are two types of views available for
+                        events
+                        1. calendar and 2. list view</p>
+                    <img src="images/calendar.png" />
+
+                    <div class="section_bdr"></div>
+                    <h3 id="chat">6. Chat</h3>
+                    <p> Here you can communicate with your workspace memebers. This chat system only works if Web
+                        FCM
+                        settings is saved. All the users of your workspace will be listed here. Also you can create
+                        groups</p>
+                    <img src="images/chat.png" />
+
+                    <div class="section_bdr"></div>
+                    <h3 id="send-mail">7. Send mail</h3>
+                    <p>Admin can send mail to selected users of workspace with attachment. admin can save mail as
+                        draft
+                        to send in future</p>
+                    <img src="images/send-mail.png" alt="Send Mail" title="Send Mail" />
+                    <hr>
+                    <img src="images/send-mail-1.png" alt="Send Mail" title="Send Mail" />
+
+                    <div class="section_bdr"></div>
+                    <h3 id="announcements">8. Announcements</h3>
+                    <p>Admin can create, edit and delete announcements for workspace users and can also pin or unpin
+                        it
+                        as per requirement.</p>
+                    <img src="images/announcements.png" alt="Announcements" title="Announcements" />
+
+                    <div class="section_bdr"></div>
+                    <h3 id="notifications">9. Notifications</h3>
+                    <p>Here workspace users can see notifications like new project or task assigned, new events or
+                        announcements created.</p>
+                    <img src="images/notifications.png" alt="Notifications" title="Notifications" />
+                    <div class="section_bdr"></div>
+                    <h3 id="billing">10. Billing</h3>
+                    <p> Admin can view all the details about active subscription like storage, modules, start and
+                        end
+                        date, subscription and transaction list.</p>
+                    <img src="images/billing.png" />
+
+                    <div class="section_bdr"></div>
+                    <h3 id="finance">11. Finance</h3>
+                    <p> Finance module is for creating and managing expenses, estimates, invoices, items, payments,
+                        taxes and units for invoices and estimates</p>
+
+                    <div class="section_bdr"></div>
+
+
+                    <h3 id="users"> 12. Manage Users</h3>
+                    <p> Here you can Add, View, Edit & Delete users from worspace.</p>
+                    <img src="images/users.png" />
+
+                    <div class="section_bdr"></div>
+
+
+                    <h3 id="activity-logs"> 13. Activity logs</h3>
+                    <p> Here you can view activities done by worksapce users like created or updated or deleted
+                        projects, project files, project milestones, tasks, comments and task status.</p>
+                    <img src="images/activity-logs.png" />
+
+                    <div class="section_bdr"></div>
+                    <h3 id="leave-requests">14. Manage Leave Requests</h3>
+                    <p>Here admin and manage leave requests coming from workspace users.</p>
+                    <img src="images/leave-requests.png" alt="Leave Requests" title="Leave Requests" />
+
+                    <div class="section_bdr"></div>
+                    <h3 id="notes">15. Manage Notes</h3>
+                    <p>This is the place where you can leave you notes for yourself. You can add, update, delete
+                        your
+                        notes.</p>
+                    <img src="images/sticky-notes.png" alt="Sticky Notes" title="Sticky Notes" />
+
+                    <div class="section_bdr"></div>
+                    <h3 id="time_tracker">16. Time Tracker</h3>
+                    <p>Here admin and manage time track work hours across projects Add(Start, Stop & Pause) & View
+                        Time
+                        Tracker. </p>
+                    <img src="images/time-tracker.PNG" alt="Time Tracker" title="Time Tracker" />
+                    <hr>
+                    <img src="images/time-tracker-sheet.PNG" alt="Time Tracker" title="Time Tracker" />
+
+                    <div class="section_bdr"></div>
+                    <h3 id="leads">17. Leads</h3>
+                    <p>Here admin and manage add, edit & View Leads and Manage potential customers and follow-up
+                        their
+                        status and convert your leads into paying client. </p>
+                    <img src="images/add_leads.png" alt="Leads" title="Leads" />
+                    <hr>
+                    <img src="images/Leads_list.png" alt="Leads" title="Leads" />
+
+                    <div class="section_bdr"></div>
+                    <h3 id="email-templates">18. Email Templates</h3>
+                    <p>Here admin send email dynamic Add, edit & View Email Templates. </p>
+                    <img src="images/edit_email.png" alt="Email Templates" title="Email Templates" />
+                    <hr>
+                    <img src="images/email_list.png" alt="Email Templates" title="Email Templates" />
+
+                    <div class="section_bdr"></div>
+                    <h3 id="knowledgebase">19. Knowledgebase</h3>
+                    <p> Here you can Add, View, Edit & Delete Knowledgebase from worspace.</p>
+                    <img src="images/article1.png" />
+                    <br>
+                    <img src="images/article2.png" />
+
+                    <div class="section_bdr"></div>
+                    <h3 id="contracts">20. Contracts</h3>
+                    <p> Here you can Add, View, Edit & Delete Contracts from worspace.</p>
+                    <img src="images/contracts1.png" alt="contracts" title="Contracts" /> <br>
+                    <img src="images/contracts2.png" alt="contracts" title="Contracts" />
+            </section>
+            <section id="credits">
+                <div class="container">
+                    <p class="append-bottom alt large"><strong><a style="color:#06F"
+                                href='https://www.infinitietech.com/' target='_blank'>Infinitie
+                                Technologies</a></strong></p>
+                    <p><a style="color:#06F" href="#one">Go To Table of Contents</a></p>
+                    <div class="section_bdr"></div>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollzer.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
